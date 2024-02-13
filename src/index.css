@@ -14,6 +14,10 @@ body{
     height: 100vh;
 }
 
+.hide{
+    display: none;
+}
+
 .flex{
     display: flex;
 }
@@ -188,7 +192,6 @@ nav a:hover{
 .career-main{
     width: 45%;
     margin-inline: 150px;
-    /* filter: drop-shadow(20px 0px 0px #e2012d); */
 }
 
 .career-inner .trophy{
@@ -215,31 +218,17 @@ nav a:hover{
 }
 
 .hilight{
-    margin-top: 100px;
-}
-
-.history-inner{
-    width: 50%;
-    height: 600px;
-}
-
-.history-inner.left{
-    border-right: 10px solid #e2012d;
-}
-
-/* .hilight{
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: 50px;
-    overflow-x: hidden;
     position: relative;
 }
 
-.button-box{
-    position: absolute;
-    width: 100%;
-    padding-inline: 120px;
-    top: 190px;
+.scene-container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.scene-video {
+    position: relative;
 }
 
 .carousel-btn{
@@ -249,7 +238,14 @@ nav a:hover{
     border: none;
     background: #e2012d;
     color: white;
+    position: absolute;
+    top: 35%;
 }
+
+.right-btn{
+    right: 0;
+}
+
 .scene{
     width: 100%;
     margin-inline: 221.5px;
@@ -258,10 +254,10 @@ nav a:hover{
 .hilight video{
     margin: 0;
     width: 1000px;
-    height: 500px;
+    height: 550px;
     border: 20px solid #e2012d;
 }
 
 .scene h2{
     margin-top: 30px;
-} */
+}
