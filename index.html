@@ -3,62 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/r-spectr" rel="stylesheet">
     <link rel="stylesheet" href="src/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div class="wrap">
-        <div class="main flex j-c">
-            <nav class="section-padding">
+        
+        <div class="main flex column a-c section-padding">
+            <nav>
                 <ul class="flex">
-                    <li><a class="h-f" href="">MAIN</a></li>
-                    <li><a href="">2013</a></li>
-                    <li><a href="">2014</a></li>
-                    <li><a href="">2015</a></li>
-                    <li><a href="">2016</a></li>
-                    <li><a href="">2017</a></li>
-                    <li><a href="">2018</a></li>
-                    <li><a href="">2019</a></li>
-                    <li><a href="">2020</a></li>
-                    <li><a href="">2021</a></li>
-                    <li><a href="">2022</a></li>
-                    <li><a href="">2023</a></li>
-                    <li><a href="">2024</a></li>
-                    <li><a class="h-f" href="">END</a></li>
+                    <li style="width: 10%;"><a href="">MAIN</a></li>
+                    <li class="flex a-c" style="width: 80%;"><div class="section-line"></div></li>
+                    <li style="width: 10%;"><a href="">END</a></li>
                 </ul>
-                <div class="section-line"></div>
-            </nav>  
-            <div class="main-title section-padding">
+            </nav> 
+            <div class="sub-title">
+
                 <div class="line">
-                    <h1>THE <span>GREATEST</span></h1>
-                    <h1>OF ALL <span>TIME</span></h1>
+                    <h2><span>#FAKER</span></h2>
+                    <h2>#SKT <span>T1</span></h2>
+                    <h2>THE <span>GREATEST</span> OF ALL <span>TIME</span></h2>
                 </div>
+
                 <div class="line">
-                    <h1><span>THE BEST PLAYER</span></h1>
-                    <h1>IN THE HISTORY</h1>
+                    <h2>THE UNKILLABLE <span>DEMON KING </span></h2>
+                    <h2>LEGEND <span>NEVER DIE</span></h2>
                 </div>
+
                 <div class="line">
-                    <h1>THE UNKILLABLE</h1>
-                    <h1><span>DEMON KING </span></h1>
+                    <h2><span>4 TIME</span> WORLDS WINNER</h2>
+                    <h2>2023. 11. 19</h2>
+                    <h2>#AHRI</h2>
                 </div>
+
                 <div class="line">
-                    <h1><span>FOUR TIME</span></h1>
-                    <h1>WORLDS <span>WINNER</span></h1>
+                    <h2>#RYZE</h2>
+                    <h2><span>YOUNGEST</span> WORLDS <span>WINNER</span> IN MID LANER</h2>
                 </div>
+
                 <div class="line">
-                    <h1>EMPOROR</h1>
-                    <h1><span>FAKER</span></h1>
+                    <h2><span>OLDEST</span> WORLDS WINNER</h2>
+                    <h2><span>#ZED</span></h2>
+                    <h2>#SYNDRA</h2>
+                </div>
+
+                <div class="line">
+                    <h2>10 TIME<span> LEAGUE WINNER</span></h2>
+                    <h2><span>2 TIME</span> MSI WINNER</h2>
                 </div>
             </div>
-            <img src="src/img/main.png" alt="faker">
-            <div class="sub-title">
+            <img class="main-img" src="src/img/main.png" alt="faker">
+            
+            <div class="logo-container">
+                <div class="mid-logo flex j-b a-c">
+                    <img src="src/img/t1-logo.png" alt="">
+                    <img src="src/img/faker-sign.png" alt="">
+                </div>
+            </div>
+            <div class="main-title">
                 <h1>" <span>All ROADS</span> EVENTUALLY <span>LEAD TO ME</span> "</h1>
             </div>
         </div>
-        
+
+        <div class="section-line section-margin"></div>
+
         <div class="introduce section-padding">
-            <div class="section-line"></div>
+
             <div class="shortcut section-margin flex j-b">
                 <p><span>NAME</span> LEE-SANG-HYEOK</p>
                 <p><span>GAME-NAME</span> FAKER</p>
@@ -66,81 +78,51 @@
                 <p><span>TEAM</span> T1 ( 2013. 04.~ )</p>
             </div>
 
-            <div class="season-kill section-margin flex">
+            
+            <div class="champion-container section-margin">
+                <h2><span>FAVORITE</span> CHAMPIONS</h2>
+                <div class="champ-main section-margin flex">
+                    <div class="champ"></div>
+                    <div class="champ"></div>
+                    <div class="champ"></div>
+                    <div class="champ"></div>
+                    <div class="champ"></div>
+                    <div class="champ"></div>
+                    <div class="champ"></div>
+                </div>
+            </div>
 
+            <div class="season-kill section-margin flex">
                 <div class="chart-title flex">
                     <div class="border"></div>
-                    <div class="inner-header">
-                        <h2><span>KILLS</span> <br>PER <br><span>YEAR</span></h2>
+                    <div class="inner-header flex column j-b">
+                            <h2><span>KDA</span></h2>
+                            <h2>PER</h2>
+                            <h2><span>SEASON</span></h2>
                     </div>
                 </div>
 
                 <div class="chart">
                     <div class="bar-section flex j-b">
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
-                        <div class="bar-container flex column a-c">
-                            <div class="bar" id="2013"></div>
-                            <p>2013</p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
 
+
             <div class="section-margin career flex">
                 <div class="career-inner left">
-                    <img class="career-main" src="src/img/main.png" alt="">
-                    <!-- <div class="trophy-container flex j-b">
-                        <img class="trophy" src="src/img/trophy1.png" alt="">
-                        <img class="trophy" src="src/img/trophy1.png" alt="">
-                        <img class="trophy" src="src/img/trophy1.png" alt="">
-                        <img class="trophy" src="src/img/trophy2.png" alt="">
-                    </div> -->
                 </div>
                 <div class="career-inner right">
-                    <ul>
+                    <ul class="flex column j-b">
+                        <li>
+                            <p>RECORD</p>
+                            <P>760W - 362L</P>
+                        </li>
+                        <li>
+                            <p>WIN RATE</p>
+                            <P>67.7%</P>
+                        </li>
                         <li>
                             <p>WORLDS CHAMPION</p>
                             <P>4 TIMES</P>
@@ -157,20 +139,41 @@
                             <p>HANGZHOU ASIAN GAME</p>
                             <P>GOLD MEDAL</P>
                         </li>
-                        <li>
-                            <p>TOTAL KILLS</p>
-                            <P>4000 KILLS</P>
-                        </li>
-                        <li>
-                            <p>TOTAL ASSIST</p>
-                            <P>5000 ASSIST</P>
-                        </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="history-container">
+        <!-- <div class="section-line section-margin"></div> -->
+
+        <!-- <div class="best-champ-container">
+
+            <div class="champ-title">
+                <h1><span>CAREER </span> SYMBOL <span>CHAMPIONS</span></h1>
+            </div>
+            <div class="champ-title flex column j-b section-padding">
+                <div class="btn-box flex j-b">
+                    <button class="carousel-btn left">left</button>
+                    <button class="carousel-btn right">right</button>
+                </div>
+            </div>
+
+            <div class="champ-main">
+                <div class="champ-inner flex a-c">
+                    <div class="champ-bg"></div>
+                    <div class="champ-bg"></div>
+                    <div class="champ-bg"></div>
+                    <div class="champ-bg"></div>
+                    <div class="champ-bg"></div>
+                    <div class="champ-bg"></div>
+                    <div class="champ-bg"></div>
+                </div>
+            </div>
+
+
+        </div> -->
+
+        <!-- <div class="history-container">
             <div class="season-container section-padding" id="2013">
                 <div class="season-main">
                     <div class="section-line"></div>
@@ -216,7 +219,7 @@
                 </div>
     
             </div>
-        </div>
+        </div> -->
 
     </div>
 
