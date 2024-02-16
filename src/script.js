@@ -1,58 +1,81 @@
-/**
- * 
-Azir Azir	153	
- 	 
-66.7%
-3.9
-Ryze Ryze	67	
- 	 
-64.2%
-4.0
-Orianna Orianna	64	
- 	 
-68.8%
-4.5
-LeBlanc LeBlanc	55	
- 	 
-81.8%
-5.8
-Corki Corki	51	
- 	 
-76.5%
-4.7
-Galio Galio	51	
- 	 
-60.8%
-4.2
-Ahri Ahri	49	
+const $main = document.querySelector('.main');
+const $subTitles = $main.querySelectorAll('.line');
 
-65.3%
-4.2
- */
+const favoriteChampionInfo = [
+    { subName: "subName" , name : 'azir', kda: 3.9, winRate: 66.7, game : 153 },
+    { subName: "subName" , name : 'ryze', kda: 4.0, winRate: 64.2, game : 67 },
+    { subName: "subName" , name : 'orianna', kda: 4.5, winRate: 68.8, game : 64 },
+    { subName: "subName" , name : 'leblanc', kda: 5.8, winRate: 81.8, game : 55 },
+    { subName: "subName" , name : 'corki', kda: 4.7, winRate: 76.5, game : 51 },
+    { subName: "subName" , name : 'galio', kda: 4.2, winRate: 60.8, game : 51 },
+    { subName: "subName" , name : 'ahri', kda: 4.2, winRate: 65.3, game : 49 },
+]
 
-const kdaPerSeason = {
-    'Season 5' : 5.5, 
-    'Season 6' : 4.3, 
-    'Season 7': 4.1, 
-    'Season 8' : 3.5, 
-    'Season 9' : 4.1, 
-    'Season 10' : 5.0, 
-    'Season 11' : 3.9, 
-    'Season 12' : 4.1, 
-    'Season 13' : 3.5, 
-    'Season 14' : 5.3 
-}
+const $champContainer = document.querySelector('.champ-container');
 
-const makeGraph = () => {
-    const graphTemplate = `<div class="bar-container"><div class="bar"></div><p>${yearKda}</p></div>`
-}
+favoriteChampionInfo.forEach((champ) => {
+
+    const champName = champ.name;
+    const champSubName = champ.subName;
+    const champWinRate = champ.winRate;
+    const champGame = champ.game;
+    const champKda = champ.kda;
+
+    /*챔프 이미지 생성*/
+
+    const champInfoTemplate = `<div class="champ-info-container hide"><div class="header-box"><h1>${champName}</h1><h2>"${champSubName}"</h2></div><div class="info-box"><p>GAME ${champGame}</p><p>KDA ${champKda}</p><p>WINRATE ${champWinRate}</p></div></div>`
+    const $champBox = document.createElement('div');
+    $champBox.classList.add('champ');
+    $champBox.classList.add(`${champName}-border`);
+    $champBox.classList.add(`${champName}-shortcut`);
+    $champBox.innerHTML = champInfoTemplate;
+    $champContainer.appendChild($champBox);
+
+    let isChampDetail = false
+
+    /*챔프 이미지 mouseover 클릭 이벤트 */
+    $champBox.addEventListener('click', (event) => {
+        const $target = event.currentTarget;
+        const $champInfo = $target.querySelector('.champ-info-container');
+        const allchamp = document.querySelectorAll('.champ');
+        if(!isChampDetail){
+            isChampDetail = true;
+            for(let i = 0; i < allchamp.length; i++) {
+                if(allchamp[i] !== $target) {
+                    allchamp[i].classList.add('hide');
+                }
+            };
+            $champInfo.classList.remove('hide');
+            $target.classList.add('champ-info');
+            $target.classList.add(`${champName}-fullcut`);
+        }else{
+            isChampDetail = false;
+            
+            $champInfo.classList.add('hide');
+            $target.classList.remove('champ-info');
+            $target.classList.remove(`${champName}-fullcut`);
+            
+            for(let i = 0; i < allchamp.length; i++) {
+                if(allchamp[i] !== $target) {
+                    setTimeout(() => {
+                        allchamp[i].classList.remove('hide');
+                    }, i * 200);
+                }
+            };
+        }
+    });
+
+});
+
+const kdaPerSeason = { 5 : 5.5, 6 : 4.3, 7 : 4.1, 8 : 3.5, 9 : 4.1, 10 : 5.0, 11 : 3.9, 12 : 4.1, 13 : 3.5, 14 : 5.3 }
+
 const $graphContainer = document.querySelector('.bar-section');
-
 for(let year in kdaPerSeason) {
     let yearKda = kdaPerSeason[year];
+    const graphTemplate = `<div class="bar-container"><div class="bar"></div><p>${year}</p></div>`
+    const bar = 
     console.log(year, yearKda)
 }
-
 
 const $historyContainers = document.querySelectorAll('.history-container');
 

@@ -15,8 +15,14 @@ body{
 }
 
 .hide{
-    display: none;
+    width: 0px !important;
+    opacity: 0 !important;
 }
+
+
+/* .hide{
+    opacity: 0 !important;
+} */
 
 .flex{
     display: flex;
@@ -52,6 +58,90 @@ body{
     margin-top: 50px;
 }
 
+.ryze-border{
+    border: 5px solid rgb(46, 46, 184); /*ryze*/
+}
+
+.azir-border{
+    border: 5px solid rgb(221, 157, 37); /*azir*/
+}
+
+.orianna-border{
+    border: 5px solid rgb(255, 176, 102); /*orianna*/
+}
+
+.corki-border{
+    border: 5px solid rgb(78, 58, 48); /*corki*/
+}
+
+.galio-border{
+    border: 5px solid rgb(214, 142, 74); /*galio*/
+}
+
+.leblanc-border{
+    border: 5px solid rgb(217, 77, 252); /*leblanc*/
+}
+
+.ahri-border{
+    border: 5px solid rgb(85, 115, 252); /*ahri*/
+}
+
+.ryze-shortcut{
+    background-image: url('/src/img/ryze-short.jpg');
+}
+
+.azir-shortcut{
+    background-image: url('/src/img/azir-short.jpg')
+}
+
+.orianna-shortcut{
+    background-image: url('/src/img/orianna-short.jpg')
+}
+
+.corki-shortcut{
+    background-image: url('/src/img/corki-short.jpg')
+}
+
+.galio-shortcut{
+    background-image: url('/src/img/galio-short.jpg')
+}
+
+.leblanc-shortcut{
+    background-image: url('/src/img/leblanc-short.jpg')
+}
+
+.ahri-shortcut{
+    background-image: url('/src/img/ahri-short.jpg')
+}
+
+.ryze-fullcut{
+    background-image: url('/src/img/ryze-4k.jpg');
+}
+
+.azir-fullcut{
+    background-image: url('/src/img/azir-4k.jpg')
+}
+
+.orianna-fullcut{
+    background-image: url('/src/img/orianna-4k.jpg')
+}
+
+.corki-fullcut{
+    background-image: url('/src/img/corki-4k.jpg')
+}
+
+.galio-fullcut{
+    background-image: url('/src/img/galio-4k.jpg')
+}
+
+.leblanc-fullcut{
+    background-image: url('/src/img/leblanc-4k.jpg')
+}
+
+.ahri-fullcut{
+    background-image: url('/src/img/ahri-4k.jpg')
+}
+
 h1, h2{
     font-family: 'R-Spectr', sans-serif;                         
     text-align: center;
@@ -79,7 +169,8 @@ span {
 
 .wrap{
     width: 100%;
-    background: #101011;
+    background: #161616;
+    overflow-x: hidden;
 }
 
 nav {
@@ -164,6 +255,11 @@ nav li:last-child{
     justify-content: space-evenly;
 }
 
+.not-active{
+    opacity: 0;
+    transform: translateY(200px);
+}
+
 .main-title {
     width: 100%;
     color: white;
@@ -177,7 +273,7 @@ nav li:last-child{
 
 .season-kill .border{
     width: 10px;
-    height: 80%;
+    height: 86%;
     margin-block: auto;
     background: #eb0e3a;
 }
@@ -188,12 +284,12 @@ nav li:last-child{
 
 .inner-header{
     height: 100%;
-    padding-block: 20px;
 }
 
 .inner-header h2{
     text-align: left;
     margin-left: 10px;
+    margin-top: 10px;
     font-size: 27px;
 }
 
@@ -271,35 +367,66 @@ nav li:last-child{
 .champ-main{
     width: 100%;
     height: 400px;
-    border: 10px solid white;
+    position: relative;
+}
+
+.champ-container{
+    width: 100%;
+    height: 100%;
 }
 
 .champ{
-    width: 14.6999%;
+    cursor: pointer;
+    width: 13%;
     height: 100%;
-    border-right: 1px solid gold;
+    background-size: cover;
+    border-radius: 25px;
+    animation: linear;
+    transition: all 2s;
 }
 
-/* .champ-title{
-    position: absolute;
-    z-index: 999;
+.champ-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    padding-block: 60px;
+    border-radius: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-inline: 100px;
+    background-position-y: -100px;
+    animation: linear;
+    transition: all 2.5s;
 }
 
-.carousel-btn{
+.champ-info h1,h2,p{
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.info-box{
+    margin-top: 50px;
+}
+
+.champ-info-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .carousel-btn{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: none;
     background: #eb0e3a;
     color: white;
-} */
+} 
 
-
-
-/* .season-main{
+.season-main{
     height: 100vh;
 }
 
@@ -396,16 +523,28 @@ nav li:last-child{
     .section-padding {
         padding-inline: 100px;
     }
-    h1, h2{
+    h1{
+        font-size: 50px;
+    }
+    h2{
         font-size: 30px;
     }
-    .main img{
+    .main-img{
         height: 90%;
+    }
+
+    .mid-logo{
+        padding-inline: 120px;
+    }
+
+    .mid-logo img{
+        height: 100px;
+    }
+    
+    .mid-logo img:last-child{
+        height: 100px;
     }
     .line{
         margin-bottom: 10px;
-    }
-    .career-inner p,tr{
-        font-size: 30px;
     }
 }
