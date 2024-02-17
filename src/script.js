@@ -67,15 +67,28 @@ favoriteChampionInfo.forEach((champ) => {
 
 });
 
-const kdaPerSeason = { 5 : 5.5, 6 : 4.3, 7 : 4.1, 8 : 3.5, 9 : 4.1, 10 : 5.0, 11 : 3.9, 12 : 4.1, 13 : 3.5, 14 : 5.3 }
-
+const kdaPerSeason = { 3 : 4.5, 4 : 3.9, 5 : 5.5, 6 : 4.3, 7 : 4.1, 8 : 3.5, 9 : 4.1, 10 : 5.0, 11 : 3.9, 12 : 4.1, 13 : 3.5, 14 : 5.3 }
 const $graphContainer = document.querySelector('.bar-section');
+
 for(let year in kdaPerSeason) {
     let yearKda = kdaPerSeason[year];
-    const graphTemplate = `<div class="bar-container"><div class="bar"></div><p>${year}</p></div>`
-    const bar = 
-    console.log(year, yearKda)
-}
+
+    const $barContainer = document.createElement('div');
+    $barContainer.classList.add('bar-container');
+
+    const $bar = document.createElement('div');
+    $bar.classList.add('bar');
+    $bar.style.height = `${yearKda * 15}%`;
+
+    const $barSeason = document.createElement('p');
+    $barSeason.innerHTML = `S ${year}`;
+
+    $barContainer.appendChild($bar);
+    $barContainer.appendChild($barSeason);
+    $graphContainer.appendChild($barContainer);
+
+
+};
 
 const $historyContainers = document.querySelectorAll('.history-container');
 

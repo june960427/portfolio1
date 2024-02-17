@@ -314,6 +314,7 @@ nav li:last-child{
 
 .bar-container p{
     font-size: 20px;
+    margin: 0;
 }
 
 .bar{
@@ -397,7 +398,7 @@ nav li:last-child{
     padding-inline: 100px;
     background-position-y: -100px;
     animation: linear;
-    transition: all 2.5s;
+    transition: all 1.3s;
 }
 
 .champ-info h1,h2,p{
