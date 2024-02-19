@@ -19,11 +19,6 @@ body{
     opacity: 0 !important;
 }
 
-
-/* .hide{
-    opacity: 0 !important;
-} */
-
 .flex{
     display: flex;
 }
@@ -116,30 +111,44 @@ body{
 
 .ryze-fullcut{
     background-image: url('/src/img/ryze-4k.jpg');
+    z-index: 999;
+    position: absolute;
 }
 
 .azir-fullcut{
-    background-image: url('/src/img/azir-4k.jpg')
+    background-image: url('/src/img/azir-4k.jpg');
+    z-index: 999;
+    position: absolute;
 }
 
 .orianna-fullcut{
-    background-image: url('/src/img/orianna-4k.jpg')
+    background-image: url('/src/img/orianna-4k.jpg');
+    z-index: 999;
+    position: absolute;
 }
 
 .corki-fullcut{
-    background-image: url('/src/img/corki-4k.jpg')
+    background-image: url('/src/img/corki-4k.jpg');
+    z-index: 999;
+    position: absolute;
 }
 
 .galio-fullcut{
-    background-image: url('/src/img/galio-4k.jpg')
+    background-image: url('/src/img/galio-4k.jpg');
+    z-index: 999;
+    position: absolute;
 }
 
 .leblanc-fullcut{
-    background-image: url('/src/img/leblanc-4k.jpg')
+    background-image: url('/src/img/leblanc-4k.jpg');
+    z-index: 999;
+    position: absolute;
 }
 
 .ahri-fullcut{
-    background-image: url('/src/img/ahri-4k.jpg')
+    background-image: url('/src/img/ahri-4k.jpg');
+    z-index: 999;
+    position: absolute;
 }
 
 h1, h2{
@@ -170,7 +179,6 @@ span {
 .wrap{
     width: 100%;
     background: #161616;
-    overflow-x: hidden;
 }
 
 nav {
@@ -210,7 +218,11 @@ nav li:last-child{
     width: 100%;
     height: 5px;
     background: #eb0e3a;
-    margin: auto;
+    margin-inline: auto;
+}
+
+.section-line:nth-child(1){
+    width: 100%;
 }
 
 .main {
@@ -283,13 +295,13 @@ nav li:last-child{
 }
 
 .inner-header{
-    height: 100%;
+    height: 80%;
+    margin-block: auto;
 }
 
 .inner-header h2{
     text-align: left;
     margin-left: 10px;
-    margin-top: 10px;
     font-size: 27px;
 }
 
@@ -328,27 +340,38 @@ nav li:last-child{
     height: 20px;
 }
 
-.career-inner{
-    width: 50%;
-    height: 320px;
+.career{
+    height: 350px;
+}
+
+.career-inner:nth-child(1) {
+    width: 350px;
+    margin-left: 50px;
+    position: relative;
+}
+
+.career-inner:nth-child(1) img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: all 1.5s;
+    /* width: 1%;
+    height: 1%; */
 }
 
 .career-main{
     width: 45%;
-    margin-inline: 150px;
 }
 
 .career-inner p{
-    font-size: 27px;
+    font-size: 23px;
     font-weight: 600;
-}
-
-.career-inner ul, li{
-    width: 100%;
 }
 
 .career-inner ul{
     height: 100%;
+    padding: 50px 0 30px 0;
 }
 
 .career-inner li{
@@ -356,8 +379,13 @@ nav li:last-child{
     justify-content: space-between;
 }
 
+.career-inner ul p:nth-child(2){
+    margin-left: 60px;
+}
+
 .champion-container{
     width: 100%;
+    overflow-x: hidden;
 }
 
 .champion-container h2{
@@ -401,7 +429,7 @@ nav li:last-child{
     transition: all 1.3s;
 }
 
-.champ-info h1,h2,p{
+.champ-info h1,.champ-info h2,.champ-info p{
     margin-bottom: 15px;
     text-align: left;
 }
@@ -418,63 +446,67 @@ nav li:last-child{
     justify-content: center;
 }
 
-/* .carousel-btn{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background: #eb0e3a;
-    color: white;
-} 
-
-.season-main{
+.season-history{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-block: 200px;
 }
 
-.hilight{
+.hilight-container{
+    width: 50%;
     position: relative;
 }
 
-.scene-container{
-    display: flex;
-    flex-wrap: nowrap;
+.hilight-inner{
+    width: 100%;
     overflow-x: hidden;
 }
 
-.scene-video {
-    position: relative;
+
+.hilight-scene{
+    width: 100%;
+    flex-shrink: 0;
 }
 
-.carousel-btn{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+.video-box{
+    width: 100%;
+}
+
+.video-box video{
+    width: 100%;
+    border: 10px solid #eb0e3a;
+}
+
+.video-box img {
+    height: 550px
+}
+
+.scene-info{
+    margin-top: 10px;
+}
+
+.scene-info p{
+    text-align: center;
+    font-size: 30px;
+    margin-block: 5px;
+}
+
+.hilight-btn-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.hilight-btn-container button{
+    height: 50px;
+    width: 50px;
     border: none;
     background: #eb0e3a;
     color: white;
-    position: absolute;
-    top: 35%;
+    border-radius: 10px;
 }
-
-.right-btn{
-    right: 0;
-}
-
-.scene{
-    width: 100%;
-    margin-inline: 221.5px;
-}
-
-.hilight video{
-    margin: 0;
-    width: 1000px;
-    height: 550px;
-    border: 20px solid #eb0e3a;
-}
-
-.scene h2{
-    margin-top: 30px;
-} */
 
 @media (max-width:600px) {
 
