@@ -3,10 +3,15 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    line-height: 1.15;
 }
 
 a{
     text-decoration: none;
+}
+
+button{
+    border: none;
 }
 
 body{
@@ -21,6 +26,22 @@ body{
 
 .flex{
     display: flex;
+}
+
+.j-e{
+    justify-content: flex-end;
+}
+
+.j-s{
+    justify-content: flex-start;
+}
+
+.a-e{
+    align-items: flex-end;
+}
+
+.a-s{
+    align-items: flex-start;
 }
 
 .column{
@@ -154,7 +175,7 @@ body{
 h1, h2{
     font-family: 'R-Spectr', sans-serif;                         
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #f2f5f8;
 }
 
@@ -231,10 +252,7 @@ nav li:last-child{
     position: relative;
     padding-block: 35px;
     justify-content: space-between;
-    background: #000000;  
-    background: -webkit-linear-gradient(to top, #161616, #000000); 
     background: linear-gradient(to top, #161616, #000000); 
-
 }
 
 .main-img{
@@ -248,6 +266,7 @@ nav li:last-child{
 .logo-container{
     width: 100%;
     padding-inline: 150px 100px;
+    z-index: 995;
 }
 
 .mid-logo img{
@@ -341,23 +360,26 @@ nav li:last-child{
 }
 
 .career{
-    height: 350px;
+    height: 500px;
+    position: relative;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('/src/img/bg2-Photoroom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(20%);
+}
+
+.career-inner{
+    z-index: 999;
 }
 
 .career-inner:nth-child(1) {
     width: 350px;
-    margin-left: 50px;
-    position: relative;
-}
-
-.career-inner:nth-child(1) img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    transition: all 1.5s;
-    /* width: 1%;
-    height: 1%; */
 }
 
 .career-main{
@@ -385,7 +407,7 @@ nav li:last-child{
 
 .champion-container{
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .champion-container h2{
@@ -423,8 +445,8 @@ nav li:last-child{
     border-radius: 25px;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-inline: 100px;
     background-position-y: -100px;
+    padding-inline: 100px;
     animation: linear;
     transition: all 1.3s;
 }
@@ -446,66 +468,100 @@ nav li:last-child{
     justify-content: center;
 }
 
-.season-history{
+/* history ver2 */
+
+.history-inner{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-block: 200px;
-}
-
-.hilight-container{
-    width: 50%;
     position: relative;
+    background: linear-gradient(to top, #161616, #000000); 
 }
 
-.hilight-inner{
+.side-section{
+    width: 35%;
+}
+
+.shortcut-container{
+    width: 75%;
+    height: 100%;
+    clip-path: polygon(0 0%, 82% 0, 100% 100%, 0 100%);
+    background: #dd012d;
+    padding: 100px 15px;
+}
+
+.header h1{
+    font-size: 30px;
+    text-align: left;
+}
+
+.header-line{
+    width: 20%;
+    height: 10px;
+    background: #f2f5f8;
+}
+
+.shortcut-container ul{
+    width: 88%;
+}
+
+.shortcut-container li{
     width: 100%;
-    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
+.shortcut-container p{
+    font-size: 21px;
+    margin-block: auto;
+}
 
-.hilight-scene{
+.main-section{
+    width: 30%;
+}
+
+.main-section h1{
+    margin-top: 80px;
+}
+
+.video-container{
+    position: absolute;
+    overflow-x: hidden;
+    width: 800px;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+}
+
+.video-carousel{
     width: 100%;
     flex-shrink: 0;
 }
 
-.video-box{
+.video-carousel video{  
     width: 100%;
+    border: 5px solid #eb0e3a;
 }
 
-.video-box video{
-    width: 100%;
-    border: 10px solid #eb0e3a;
-}
-
-.video-box img {
-    height: 550px
-}
-
-.scene-info{
-    margin-top: 10px;
-}
-
-.scene-info p{
+.video-carousel p{
+    font-size: 40px;
     text-align: center;
-    font-size: 30px;
-    margin-block: 5px;
+    margin-block: 20px;
+    margin-inline: auto;
 }
 
-.hilight-btn-container{
-    position: absolute;
-    bottom: 0;
+.background{
     width: 100%;
+    height: 100%;
 }
 
-.hilight-btn-container button{
-    height: 50px;
-    width: 50px;
-    border: none;
-    background: #eb0e3a;
-    color: white;
-    border-radius: 10px;
+.background-img{
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/img/riven-Photoroom.png');
+    background-size: cover;
+    background-position-x: center;
+    filter: drop-shadow(-10px -5px 5px #dd012d);
 }
 
 @media (max-width:600px) {
