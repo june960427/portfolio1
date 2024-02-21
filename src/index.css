@@ -14,11 +14,6 @@ button{
     border: none;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-}
-
 .hide{
     width: 0px !important;
     opacity: 0 !important;
@@ -197,11 +192,6 @@ span {
     color: #eb0e3a;
 }
 
-.wrap{
-    width: 100%;
-    background: #161616;
-}
-
 nav {
     width: 100%;
 }
@@ -246,13 +236,38 @@ nav li:last-child{
     width: 100%;
 }
 
-.main {
+/* main container */
+
+body{
+    width: 100%;
+}
+
+.wrap{
+    width: 100%;
+    background: #161616;
+}
+
+.main-container{
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.main-container-inner{
     width: 100%;
     height: 100vh;
+    overflow-y: hidden;
+    flex-shrink: 0;
+}
+
+/* main section */
+
+.main {
     position: relative;
     padding-block: 35px;
     justify-content: space-between;
-    background: linear-gradient(to top, #161616, #000000); 
+    background: linear-gradient(to top, #161616, #000000);
 }
 
 .main-img{
@@ -286,16 +301,13 @@ nav li:last-child{
     justify-content: space-evenly;
 }
 
-.not-active{
-    opacity: 0;
-    transform: translateY(200px);
-}
-
 .main-title {
     width: 100%;
     color: white;
     z-index: 999;
 }
+
+/* kill graph section */
 
 .season-kill {
     height: 180px;
@@ -359,51 +371,84 @@ nav li:last-child{
     height: 20px;
 }
 
-.career{
-    height: 500px;
-    position: relative;
-}
+/* career introduce section */
 
-.bg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: url('/src/img/bg2-Photoroom.png');
+.career{
+    position: relative;
+    height: 500px;
+    background-image: url('/src/img/bg3.png');
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(20%);
+    background-position-x: center;
+    transition: all 1s;
+    filter: drop-shadow(0px -3px 15px #eb0e3a);
 }
 
-.career-inner{
+.career-img-container{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.bg-container{
+    width: 50%;
+}
+
+.career-img-container img{
+    transition: all 1s;
+    position: absolute;
+    filter: brightness(5%);
+    filter: brightness(92%);
+}
+
+.bg-inner{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: all 1s;
+    /* filter: brightness(1%); */
+}
+
+.bg-inner:nth-child(2){
+    background: #dd012d;
+    box-shadow:  2px 2px 10px #dd012d;
+}
+
+.bg-inner:nth-child(1){
+    background: white;
+    box-shadow: 2px 2px 5px white;
+}
+
+.career-title{
+    backdrop-filter: blur(1.8px);
+    border-top: #949494 solid 1.3px;
+    overflow-x: hidden;
+    transition: all 1s;
+}
+
+.career-title ul{
+    width: 100%;
     z-index: 999;
+    padding-inline: 50px;
+    flex-shrink: 0;
 }
 
-.career-inner:nth-child(1) {
-    width: 350px;
-}
-
-.career-main{
-    width: 45%;
-}
-
-.career-inner p{
-    font-size: 23px;
-    font-weight: 600;
-}
-
-.career-inner ul{
-    height: 100%;
-    padding: 50px 0 30px 0;
-}
-
-.career-inner li{
+.career-title li{
     display: flex;
-    justify-content: space-between;
+    margin-block: 15px;
 }
 
-.career-inner ul p:nth-child(2){
-    margin-left: 60px;
+.career-title p:nth-child(2){
+    margin-left: 20px;
 }
+
+.career-title ul p{
+    text-align: center;
+    font-size: 20px;
+}
+
+/* favorite champ */
 
 .champion-container{
     width: 100%;
@@ -468,11 +513,10 @@ nav li:last-child{
     justify-content: center;
 }
 
-/* history ver2 */
+/* history section */
 
 .history-inner{
-    height: 100vh;
-    position: relative;
+    height: 100%;
     background: linear-gradient(to top, #161616, #000000); 
 }
 
@@ -480,7 +524,7 @@ nav li:last-child{
     width: 35%;
 }
 
-.shortcut-container{
+.history-info-container{
     width: 75%;
     height: 100%;
     clip-path: polygon(0 0%, 82% 0, 100% 100%, 0 100%);
@@ -499,55 +543,65 @@ nav li:last-child{
     background: #f2f5f8;
 }
 
-.shortcut-container ul{
+.history-info-container ul{
     width: 88%;
 }
 
-.shortcut-container li{
+.history-info-container li{
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.shortcut-container p{
+.history-info-container p{
     font-size: 21px;
     margin-block: auto;
 }
 
 .main-section{
     width: 30%;
-}
-
-.main-section h1{
-    margin-top: 80px;
+    height: 100%;
+    padding-block: 50px;
 }
 
 .video-container{
-    position: absolute;
     overflow-x: hidden;
     width: 800px;
     z-index: 999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -35%);
 }
 
-.video-carousel{
+.video-inner{
     width: 100%;
     flex-shrink: 0;
 }
 
-.video-carousel video{  
+.video-inner video{  
     width: 100%;
     border: 5px solid #eb0e3a;
 }
 
-.video-carousel p{
+.video-inner p{
     font-size: 40px;
     text-align: center;
     margin-block: 20px;
     margin-inline: auto;
+}
+
+.carousel-btn-container{
+    width: 100%;
+    height: 10%;
+}
+
+.carousel-btn-container button{
+    width: 25%;
+    height: 80%;
+    background: #eb0e3a;
+    border: none;
+}
+
+.carousel-btn-container p{
+    font-size: 18px;
 }
 
 .background{
@@ -558,7 +612,6 @@ nav li:last-child{
 .background-img{
     width: 100%;
     height: 100%;
-    background-image: url('/src/img/riven-Photoroom.png');
     background-size: cover;
     background-position-x: center;
     filter: drop-shadow(-10px -5px 5px #dd012d);
