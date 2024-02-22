@@ -381,7 +381,8 @@ body{
     background-size: cover;
     background-position-x: center;
     transition: all 1s;
-    filter: drop-shadow(0px -3px 15px #eb0e3a);
+    filter: drop-shadow(0px -3px 15px #494949);
+    
 }
 
 .career-img-container{
@@ -517,11 +518,30 @@ body{
 
 .history-inner{
     height: 100%;
-    background: linear-gradient(to top, #161616, #000000); 
+    background: linear-gradient(to top, #161616, #000000);
+    position: relative;
+}
+
+.inner-background{
+    width: 0%;
+    right: 0;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.inner-background-active{
+    width: 100%;
+    filter: drop-shadow(10px -5px 10px #dd012d);
 }
 
 .side-section{
     width: 35%;
+    /* z-index: 999; */
 }
 
 .history-info-container{
@@ -529,6 +549,7 @@ body{
     height: 100%;
     clip-path: polygon(0 0%, 82% 0, 100% 100%, 0 100%);
     background: #dd012d;
+    
     padding: 100px 15px;
 }
 
@@ -563,12 +584,12 @@ body{
     width: 30%;
     height: 100%;
     padding-block: 50px;
+    z-index: 999;
 }
 
-.video-container{
+.video-carousel{
     overflow-x: hidden;
     width: 800px;
-    z-index: 999;
 }
 
 .video-inner{
@@ -577,8 +598,8 @@ body{
 }
 
 .video-inner video{  
-    width: 100%;
     border: 5px solid #eb0e3a;
+    width: 100%;
 }
 
 .video-inner p{
@@ -610,11 +631,17 @@ body{
 }
 
 .background-img{
-    width: 100%;
+    width: 0%;
     height: 100%;
     background-size: cover;
     background-position-x: center;
-    filter: drop-shadow(-10px -5px 5px #dd012d);
+}
+
+.background-img-active {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px -10px 5px #dd012d);
+    transition: all 1s;
 }
 
 @media (max-width:600px) {
