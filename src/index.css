@@ -12,6 +12,7 @@ a{
 
 button{
     border: none;
+    cursor: pointer;
 }
 
 .hide{
@@ -245,20 +246,12 @@ body{
 .wrap{
     width: 100%;
     background: #161616;
-}
-
-.main-container{
-    width: 100%;
-    overflow-x: hidden;
-    position: relative;
-    scroll-behavior: smooth;
+    overflow-y: hidden;
 }
 
 .main-container-inner{
     width: 100%;
     height: 100vh;
-    overflow-y: hidden;
-    flex-shrink: 0;
 }
 
 /* main section */
@@ -277,7 +270,7 @@ body{
     z-index: 999;
 
     filter: brightness(0%);
-    height: 0%;
+    height: 90%;
     transition: all 1.5s;
 }
 
@@ -389,10 +382,6 @@ body{
     transition: all 0.3s;
 }
 
-.bar:nth-child(2){
-    height: 20px;
-}
-
 /* career introduce section */
 
 .career{
@@ -421,10 +410,7 @@ body{
 .career-img-container img{
     transition: all 1s;
     position: absolute;
-
     filter: brightness(0%);
-
-    /* filter: brightness(92%); */
 }
 
 .bg-inner{
@@ -481,23 +467,20 @@ body{
     overflow: hidden;
 }
 
-.champion-container h2{
+.champion-container p{
     text-align: left;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .champ-main{
     width: 0%;
-    height: 400px;
     position: relative;
-    
-    /* width: 100%; */
     transition: all 2s;
 }
 
 .champ-container{
     width: 100%;
-    height: 100%;
+    height: 400px;
 }
 
 .champ{
@@ -544,7 +527,42 @@ body{
 
 /* history section */
 
-.history-inner{
+.history-container{
+    position: relative;
+    z-index: 999;
+}
+
+.history-btn-container{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 999;
+}
+
+.history-btn-container button{
+    width: 100px;
+    height: 50px;
+    font-size: 50px;
+    color: white;
+    background: transparent;
+}
+
+.history-background{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.history-main{
+    height: 100%;
+}
+
+/* .history-inner{
     height: 100%;
     background: linear-gradient(to top, #161616, #000000);
     position: relative;
@@ -569,7 +587,6 @@ body{
 
 .side-section{
     width: 35%;
-    /* z-index: 999; */
 }
 
 .history-info-container{
@@ -646,7 +663,6 @@ body{
     width: 25%;
     height: 80%;
     background: #eb0e3a;
-    border: none;
 }
 
 .carousel-btn-container p{
@@ -670,7 +686,7 @@ body{
     height: 100%;
     filter: drop-shadow(0px -10px 5px #dd012d);
     transition: all 1s;
-}
+}  */
 
 @media (max-width:600px) {
 
