@@ -1,7 +1,31 @@
-const observer = new IntersectionObserver((entries) => {});
+/* 메인 페이지 로드 시 에니메이션 */
+const $main = document.querySelector('.main');
 
-// const $main = document.querySelector('.main');
-// const $subTitles = $main.querySelectorAll('.line');
+window.addEventListener('DOMContentLoaded', ()=> {
+    const $subTitles = $main.querySelectorAll('.line');
+    const $mainImg = $main.querySelector('.main-img');
+    const $mainLogo = $main.querySelector('.mid-logo');
+    const $mainTitle = $main.querySelector('.main-title');
+
+    for (let i = 0; i < $subTitles.length; i++) {
+        setTimeout(() => {
+            $subTitles[i].style.transform = 'translateX(0%)';
+            $subTitles[i].style.opacity = 1;
+            $subTitles[i].style.width = '100%';
+        }, i * 100);
+    };
+
+    setTimeout(() => {
+        $mainImg.style.filter = 'brightness(90%)';
+        $mainLogo.style.filter = 'brightness(90%)';
+    }, 300);
+
+    setTimeout(() => {
+        $mainTitle.style.transform = 'translateY(0%)';
+    }, 700);
+
+});
+
 
 const newElement = (element, classList = '') => {
     const $element = document.createElement(element);
@@ -10,9 +34,11 @@ const newElement = (element, classList = '') => {
             $element.classList.add(className); 
         });
     }
-
+    
     return $element;
-}
+};
+
+/* 소개 섹션 생성 */
 
 const favoriteChampionInfo = [
     { subName: "the emeporor of the sands" , name : 'azir', kda: 3.9, winRate: 66.7, game : 153 },
@@ -38,7 +64,8 @@ favoriteChampionInfo.forEach((champ) => {
 
     /*챔프 이미지 생성*/
     const champInfoTemplate = `<div class="champ-info-container hide"><div class="header-box"><h1>${champName}</h1><h2>"${champSubName}"</h2></div><div class="info-box"><p>GAME ${champGame}</p><p>KDA ${champKda}</p><p>WINRATE ${champWinRate}%</p></div></div>`
-    const $champBox = newElement('div', `champ ${champName}-border ${champName}-shortcut`);
+    const $champBox = newElement('div', `champ ${champName}-shortcut`);
+    // ${champName}-border
     $champBox.innerHTML = champInfoTemplate;
     $champContainer.appendChild($champBox);
 
@@ -53,6 +80,7 @@ favoriteChampionInfo.forEach((champ) => {
 
         if(!isChampDetail){
             isChampDetail = true;
+            $target.style.width = '';
             for(let i = 0; i < allchamp.length; i++) {
                 if(allchamp[i] !== $target) {
                     allchamp[i].classList.add('hide');
@@ -94,7 +122,7 @@ for(let year in kdaPerYear) {
     
     /* 그래프 생성 */
     const $bar = newElement('div', 'bar');
-    $bar.style.height = `${yearKda * 15}%`;
+    // $bar.style.height = `${yearKda * 15}%`;
     $barContainer.appendChild($bar);
     
     /* 연도 표시 생성 */
@@ -102,6 +130,54 @@ for(let year in kdaPerYear) {
     $barSeason.innerHTML = year
     $barContainer.appendChild($barSeason);
 }
+
+const $target = document.querySelector('.champ-main');
+const champBoxAnimation = () => {
+    const $champContainer = document.querySelector('.champ-main');
+    const $allChamp = document.querySelectorAll('.champ');
+    $champContainer.style.width = '100%';
+    for(let i = 0; i < $allChamp.length; i++){
+        $allChamp[i].classList.add('ryze-border');
+        $allChamp[i].style.width = '13%';
+    };
+};
+
+
+// const scrollEvent = (target, event) => {
+//     const callback = (entry, observer)=>{
+//         if(entry[0].isIntersecting){
+//             event();
+//         }
+//     };
+//     let observer = new IntersectionObserver(callback, {root: null, threshold: 1});
+//     observer.observe(target);
+// };
+
+// scrollEvent($target, champBoxAnimation);
+
+
+
+// const barAnimation = () => {
+//     const $bar = document.querySelectorAll('.bar');
+//     for(let i = 0; i < $bar.length; i++){
+//         setTimeout(() => {
+//             $bar[i].style.height = '60px'
+//         }, i * 120);
+//     };
+// };
+
+// const $career = document.querySelector('.career');
+// const $mainImg2 = $career.querySelector('img');
+// const $bacgkround = $career.querySelectorAll('.bg-inner');
+// const $animationElements = [$mainImg2, ...$bacgkround]; 
+// // const $careerUl = $career.querySelectorAll('ul');
+// for(let i = 0; i < $animationElements.length; i++){
+//     $animationElements[i].style.filter = 'brightness(100%)';
+// };
+// setTimeout(() => {
+//     $career.style.filter = 'drop-shadow(0px -10px 20px #696868)'
+// }, 550);
+
 
 const historyData = [
     { 
