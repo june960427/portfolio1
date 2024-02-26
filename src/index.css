@@ -528,259 +528,231 @@ body{
 /* history section */
 
 .history-container{
-    position: relative;
+    height: 100vh;
 }
 
-.history-btn-container{
-    position: absolute;
-    width: 100%;
-    bottom: 50%;
-    padding-inline: 100px;
-    z-index: 999;
-}
-
-.history-btn-container button{
-    width: 100px;
-    height: 50px;
-    font-size: 50px;
-    color: white;
-    background: transparent;
-}
-
-.history-main-container{
+.history-carousel-container{
+    width: 80%;
     height: 100%;
 }
 
-.history-main-inner{
-    width: 90%;
-    height: 80%;
-    clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 80% 100%, 10% 100%, 0 90%, 0% 20%);
-    background: #dd012d;
+.inner-padding{
+    padding: 5px;
 }
 
-.history{
-    width: 98%;
-    height: 97%;
-    clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 80% 100%, 10% 100%, 0 90%, 0% 20%);
-}
-
-.video-container{
-    width: 75%;
-    height: 100%;
+.inner-border{
+    border-radius: 10px;
     background: black;
 }
 
-.video-inner{
-    height: 70%;
-    padding: 20px 0px 20px 20px;
+.history-main{
+    width: 100%;
+    height: 95%;
 }
 
-.video-box{
-    width: 75%;
+.video-container{
+    width: 50%;
     height: 100%;
-    padding-right: 20px;
+}
+
+.history-season-info-container{
+    width: 30%;
+    height: 100%;
+}
+
+.header-container{
+    width: 20%;
+    height: 100%;
+}
+
+.header-inner{
+    width: 100%;
+    height: 15%;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+} 
+
+.header h1{
+    font-size: 30px;
+}
+
+.team-info{
+    width: 100%;
+    height: 100%;
+    background: #dd012d;
+}
+
+.team-info img{
+    width: 40%;
+}
+
+.season-thema{
+    width: 100%;
+    height: 30%;
+}
+
+.season-thema h2{
+    font-size: 17px;
+}
+
+.season-thema-inner{
+    width: 100%;
+    height: 100%;
+}
+
+.container-header{
+    width: 100%;
+    padding: 15px 15px 0 15px;
+}
+
+.container-header p{
+    font-size: 21px;
+}
+
+.header-line{
+    width: 50px;
+    height: 5px;
+    background: #dd012d;
+}
+
+.season-img-container{
+    width: 100%;
+    height: 40%;
+}
+
+.season-img{
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/img/T1_Faker_2024_Split_1.png');
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+
+.season-img img{
+    width: 100%;
+    border-radius: 13px;
+}
+
+.video-main{
+    width: 100%;
+    height: 100%;
+}
+
+.video-inner-container{
+    width: 100%;
+    height: 50%;
 }
 
 .video{
     width: 100%;
     height: 100%;
-    background: #dd012d;
 }
 
-.video-side{
-    width: 25%;
-    height: 100%;
-    background: #dd012d;
-}
-
-
-.video-info-container{
-    height: 30%;
-    padding: 0 0 20px 20px;
-}
-
-.video-info-inner{
-    width: 75%;
-    height: 100%;
-    padding-right: 20px;
-}
-
-.video-info{
+.video video{
     width: 100%;
-    height: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 100%, 100% 100%, 15% 100%, 0 70%, 0% 20%);
-    background: #dd012d;
 }
 
-.season-champ-info{
-    width: 25%;
-    height: 100%;
-    background: #dd012d;
-}
-
-.season-container{
-    width: 25%;
-    height: 100%;
-    background-color: black;
-}
-
-.season-header-container{
+.btn-container{
     width: 100%;
-    height: 25%;
+    height: 10%;
+}
+
+.video-btn-inner p{
+    font-size: 21px;
+    color: white;
+}
+
+.button-container{
+    width: 100%;
+    height: 10%;
+}
+
+.info{
     padding: 20px;
 }
 
-.season-header{
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background: #eb0e3a;
-    clip-path: polygon(0 0, 62% 0, 100% 40%, 100% 100%, 100% 100%, 10% 100%, 0 100%, 0% 20%);
+.info p{
+    margin-bottom: 10px;
 }
 
-.season-header h1{
-    font-size: 38px;
-    text-align: left;
+.match p{
+    margin-top: 10px;
+    font-size: 30px !important;
+}
+
+.button .container-header{
+    width: 70%;
+    padding-inline: 20px;
+}
+
+.button .info{
+    width: 30%;
+    padding-top: 30px;
+}
+
+.button-inner{
+    width: 50%;
+    height: 100%;
+}
+
+.button{
+    width: 100%;
+    height: 100%;
+}
+
+.button-content{
+    width: 100%;
+    height: 100%;
+}
+
+.info ul{
+    width: 100%;
+}
+
+.info li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info p{
+    font-size: 21px;
+}
+
+.match-info-container{
+    width: 100%;
+    height: 40%;
+}
+
+.match-info-inner{
+    width: 100%;
+    height: 100%;
 }
 
 .season-info-container{
     width: 100%;
-    height: 75%;
-    padding: 0 20px 20px 20px;
+    height: 60%;
 }
 
 .season-info{
     width: 100%;
     height: 100%;
-    padding: 20px;
-    background: #eb0e3a;
 }
 
-/* .history-inner{
-    height: 100%;
-    background: linear-gradient(to top, #161616, #000000);
-    position: relative;
-}
-
-.inner-background{
-    width: 0%;
-    right: 0;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    position: absolute;
-    transition: all 0.5s;
-}
-
-.inner-background-active{
+.season-rank-container{
     width: 100%;
-    filter: drop-shadow(10px -5px 10px #dd012d);
+    height: 40%;
 }
 
-.side-section{
-    width: 35%;
-}
-
-.history-info-container{
-    width: 75%;
-    height: 100%;
-    clip-path: polygon(0 0%, 82% 0, 100% 100%, 0 100%);
-    background: #dd012d;
-    
-    padding: 100px 15px;
-}
-
-.header h1{
-    font-size: 30px;
-    text-align: left;
-}
-
-.header-line{
-    width: 20%;
-    height: 10px;
-    background: #f2f5f8;
-}
-
-.history-info-container ul{
-    width: 88%;
-}
-
-.history-info-container li{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.history-info-container p{
-    font-size: 21px;
-    margin-block: auto;
-}
-
-.main-section{
-    width: 30%;
-    height: 100%;
-    padding-block: 50px;
-    z-index: 999;
-}
-
-.video-carousel{
-    overflow-x: hidden;
-    width: 800px;
-}
-
-.video-inner{
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.video-inner video{  
-    border: 5px solid #eb0e3a;
-    width: 100%;
-}
-
-.video-inner p{
-    font-size: 40px;
-    text-align: center;
-    margin-block: 20px;
-    margin-inline: auto;
-}
-
-.carousel-btn-container{
-    width: 100%;
-    height: 10%;
-}
-
-.carousel-btn-container button{
-    width: 25%;
-    height: 80%;
-    background: #eb0e3a;
-}
-
-.carousel-btn-container p{
-    font-size: 18px;
-}
-
-.background{
+.season-rank{
     width: 100%;
     height: 100%;
 }
 
-.background-img{
-    width: 0%;
-    height: 100%;
-    background-size: cover;
-    background-position-x: center;
-}
-
-.background-img-active {
-    width: 100%;
-    height: 100%;
-    filter: drop-shadow(0px -10px 5px #dd012d);
-    transition: all 1s;
-}  */
 
 @media (max-width:600px) {
 
