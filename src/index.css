@@ -533,7 +533,7 @@ body{
 
 .history-carousel-container{
     width: 80%;
-    height: 100%;
+    height: 90%;
 }
 
 .inner-padding{
@@ -547,7 +547,7 @@ body{
 
 .history-main{
     width: 100%;
-    height: 95%;
+    height: 100%;
 }
 
 .video-container{
@@ -589,16 +589,16 @@ body{
     width: 40%;
 }
 
-.season-thema{
+.team-introduce{
     width: 100%;
     height: 30%;
 }
 
-.season-thema h2{
+.team-introduce h2{
     font-size: 17px;
 }
 
-.season-thema-inner{
+.team-introduce-inner{
     width: 100%;
     height: 100%;
 }
@@ -673,7 +673,7 @@ body{
 }
 
 .info{
-    padding: 20px;
+    padding: 15px;
 }
 
 .info p{
@@ -717,6 +717,7 @@ body{
 .info li{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .info p{
@@ -731,6 +732,23 @@ body{
 .match-info-inner{
     width: 100%;
     height: 100%;
+    position: relative;
+}
+
+.match-info-inner .background{
+    background-size: cover;
+    filter: brightness(40%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.match-info-inner .container-header,
+.match-info-inner .info{
+    position: relative;
+    width: 40%;
+    z-index: 999;
 }
 
 .season-info-container{
@@ -743,16 +761,43 @@ body{
     height: 100%;
 }
 
-.season-rank-container{
+.season-champ-container{
     width: 100%;
     height: 40%;
 }
 
-.season-rank{
+.season-champ{
     width: 100%;
     height: 100%;
 }
 
+.img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url('/src/img/ahri-port.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.season-champ .container-header{
+    height: 20%;
+}
+
+
+.season-champ .info{
+    height: 80%;
+}
+
+.season-champ table{
+    width: 100%;
+    height: 100%;
+}
+
+.season-champ table p{
+    margin-bottom: 0;
+    text-align: center;
+}
 
 @media (max-width:600px) {
 
@@ -825,5 +870,15 @@ body{
     }
     .line{
         margin-bottom: 10px;
+    }
+    .container-header p{
+        font-size: 16px;
+    }
+    .info p{
+        font-size: 16px;
+    }
+
+    .team-introduce .info p{
+        font-size: 14px;
     }
 }
