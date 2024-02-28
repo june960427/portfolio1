@@ -349,7 +349,6 @@ const newElement = (element, classList = '') => {
             $element.classList.add(className); 
         });
     }
-    
     return $element;
 };
 
@@ -705,12 +704,14 @@ historyData.forEach((history) => {
     /* 버튼 클릭 이벤트 */
     const $btnContainer = $videoMain.querySelector('.button-container');
     $btnContainer.addEventListener('click', (event) => {
-        const target = event.target.closest('.button');
-        const targetAttr = target.getAttribute('data-side');
-        const video = $videoMain.querySelector('video');
-        const $anmiationContainers = $videoMain.querySelectorAll(`.${target.classList[0]}[data-side=${targetAttr}], .video, .match-info-inner`);
+        const $target = event.target.closest('.button');
         
-        if(target){
+        if($target){
+
+            const targetAttr = $target.getAttribute('data-side');
+            const video = $videoMain.querySelector('video');
+            const $anmiationContainers = $videoMain.querySelectorAll(`.${target.classList[0]}[data-side=${targetAttr}], .video, .match-info-inner`);
+
             if(targetAttr === 'prev' &&  1 <= videoIndex){
                 videoIndex--
                 btnClickEvent($anmiationContainers,history, videoIndex);

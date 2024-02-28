@@ -286,7 +286,7 @@ body{
 }
 
 .mid-logo img{
-    height: 100px;
+    height: 130px;
 }
 
 .mid-logo img:last-child{
@@ -295,6 +295,10 @@ body{
 
 .sub-title{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .line {
@@ -851,7 +855,8 @@ body{
     margin: auto;
 }
 
-@media (max-width: 1440px) {
+/* @media (max-width: 1900px) {
+
     .section-margin {
         margin-top: 30px;
     }
@@ -870,17 +875,17 @@ body{
     .line{
         margin-bottom: 2px;
     }
-    nav{
-        padding-inline: 80px;
+    nav:first-child{
+        padding-inline: 50px;
     }
     .logo-container{
-        padding-inline: 200px 150px;
+        padding-inline: 180px 130px;
     }
     .logo-container img:first-child{
-        height: 100px;
+        height: 90px;
     }
     .logo-container img:last-child{
-        height: 110px;
+        height: 80px;
     }
     .introduce .section-padding{
         padding-inline: 100px;
@@ -921,6 +926,12 @@ body{
     }
     .carousel-nav-container, .history-carousel-container{
         width: 90%;
+    }
+    .carousel-nav{
+        padding-inline: 0 !important;
+    }
+    .history-container{
+        min-height: 800px;
     }
     .history-main p{
         font-size: 14px;
@@ -930,33 +941,33 @@ body{
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
     .section-margin {
         margin-top: 30px;
     }
     .section-padding {
-        padding-inline: 10px;
+        padding-inline: 50px;
     }
     h1{
-        font-size: 25px;
+        font-size: 29px;
     }
     h2{
-        font-size: 32px;
+        font-size: 22px;
     }
     a, p{
-        font-size: 16px;
+        font-size: 18px !important;
     }
     .line{
-        margin-bottom: 2px;
+        margin-bottom: 4px;
     }
     .logo-container{
-        padding-inline: 200px 150px;
+        padding-inline: 70px 50px;
     }
     .logo-container img:first-child{
         height: 100px;
     }
     .logo-container img:last-child{
-        height: 110px;
+        height: 80px;
     }
     .introduce .section-padding{
         padding-inline: 100px;
@@ -964,27 +975,40 @@ body{
     .introduce p{
         font-size: 20px;
     }
+    .main-title{
+        transform: translateY(180%);
+    }
+    .champ-main{
+        margin-top: 20px;
+    }
     .champ-container{
         height: 300px;
+    }
+    .info-box{
+        margin-top: 20px;
     }
     .champ-info h1, .champ-info h2{
         margin-bottom: 5px;
     }
     .bar-container p {
-        font-size: 16px;
+        font-size: 13px;
         margin: 0;
     }
     .season-kill{
-        height: 150px;
+        height: 180px;
     }
     .chart{
         height: 100%;
     }
     .bar-section{
         height: 100%;
+        padding-block: 10px;
     }
     .season-kill .border{
-        height: 77%;
+        height: 68%;
+    }
+    .inner-header{
+        padding-block: 10px;
     }
     .inner-header h2{
         font-size: 25px;
@@ -995,13 +1019,200 @@ body{
     .career img{
         height: 400px;
     }
-    .carousel-nav-container, .history-carousel-container{
-        width: 90%;
+    .career ul{
+        padding-inline: 10px;
     }
+    .career-title p{
+        font-size: 10px;
+    }
+    .bg-inner{
+        width: 80px;
+        height: 80px;
+    }
+    .carousel-nav nav{
+        padding-inline: 0 !important;
+    }
+
+    .carousel-nav-container, .history-carousel-container{
+        width: 95%;
+    }
+
+    .history-container{
+        min-height: 790px;
+    }
+
+    .history-container h1{
+        font-size: 28px;
+    }
+
     .history-main p{
-        font-size: 14px;
+        font-size: 14px !important;
     }
     .container-header p, .match-info-container p, .season-info-container p{
-        font-size: 17px;
+        font-size: 18px !important;
+    }
+    .container-header{
+        padding: 7px 5px;
+    }
+
+    .info{
+        padding: 5px 7px;
+    }
+
+    .header-line{
+        width: 50px;
+    }
+    .img{
+        width: 35px;
+        height: 35px;
     }
 }
+
+@media (max-width: 1024px) {
+    .section-margin {
+        margin-top: 20px;
+    }
+    .section-padding {
+        padding-inline: 10px;
+    }
+    h1{
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    h2{
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+    a, p{
+        font-size: 16px !important;
+    }
+    nav:first-child{
+        padding-inline: 80px;
+    }
+    .line{
+        margin-bottom: 4px;
+        width: 90% !important;
+    }
+    .logo-container{
+        padding-inline: 130px 100px;
+    }
+    .logo-container img:first-child{
+        height: 60px;
+    }
+    .logo-container img:last-child{
+        height: 60px;
+    }
+    .main-title{
+        transform: translateY(200%);
+    }
+    .introduce .section-padding{
+        padding-inline: 50px;
+    }
+    .introduce p{
+        font-size: 16px;
+    }
+    .champ-main{
+        margin-top: 20px;
+    }
+    .champ-container{
+        height: 220px;
+    }
+    .info-box{
+        margin-top: 20px;
+    }
+    .champ-info h1, .champ-info h2{
+        margin-bottom: 5px;
+    }
+    .bar-container p {
+        font-size: 10px !important;
+        margin: 0;
+    }
+    .season-kill{
+        height: 150px;
+    }
+    .chart{
+        height: 100%;
+    }
+    .bar-section{
+        height: 100%;
+        padding-block: 10px;
+    }
+    .season-kill .border{
+        width: 6px;
+        height: 68%;
+    }
+    .inner-header{
+        padding-block: 10px;
+    }
+    .inner-header h2{
+        font-size: 20px;
+    }
+    .career{
+        height: 280px;
+    }
+    .career img{
+        height: 280px;
+    }
+    .career ul{
+        padding-inline: 10px;
+    }
+    .career-title p{
+        font-size: 13px !important;
+    }
+
+    .career-title p:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .bg-inner{
+        width: 50px;
+        height: 50px;
+    }
+
+    .carousel-nav-container, .history-carousel-container{
+        width: 95%;
+    }
+
+    .history-container{
+        min-height: 600px;
+    }
+
+    .history-container h1{
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+
+    .carousel-nav{
+        padding: 0 !important;
+    }
+
+    .section-line{
+        height: 3px;
+    }
+
+    .history-main p{
+        font-size: 12px !important;
+    }
+    .container-header p, .match-info-container p, .season-info-container p{
+        font-size: 13px !important;
+    }
+    .container-header{
+        padding: 7px 5px;
+    }
+    .container-header .header-line{
+        width: 23px;
+        height: 3px;
+    }
+    .info{
+        padding: 5px 7px;
+    }
+
+    .header-line{
+        width: 30px;
+    }
+
+    .img{
+        width: 20px;
+        height: 20px;
+    }
+} */
