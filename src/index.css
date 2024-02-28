@@ -17,6 +17,7 @@ button{
 }
 
 .hide{
+    width: 0px !important;
     opacity: 0 !important;
     pointer-events: none;
 }
@@ -100,71 +101,71 @@ button{
 }
 
 .ryze-shortcut{
-    background-image: url('/src/img/ryze-short.jpg');
+    background-image: url('/src/img/champ-short/ryze-short.jpg');
 }
 
 .azir-shortcut{
-    background-image: url('/src/img/azir-short.jpg')
+    background-image: url('/src/img/champ-short/azir-short.jpg')
 }
 
 .orianna-shortcut{
-    background-image: url('/src/img/orianna-short.jpg')
+    background-image: url('/src/img/champ-short/orianna-short.jpg')
 }
 
 .corki-shortcut{
-    background-image: url('/src/img/corki-short.jpg')
+    background-image: url('/src/img/champ-short/corki-short.jpg')
 }
 
 .galio-shortcut{
-    background-image: url('/src/img/galio-short.jpg')
+    background-image: url('/src/img/champ-short/galio-short.jpg')
 }
 
 .leblanc-shortcut{
-    background-image: url('/src/img/leblanc-short.jpg')
+    background-image: url('/src/img/champ-short/leblanc-short.jpg')
 }
 
 .ahri-shortcut{
-    background-image: url('/src/img/ahri-short.jpg')
+    background-image: url('/src/img/champ-short/ahri-short.jpg')
 }
 
 .ryze-fullcut{
-    background-image: url('/src/img/ryze-4k.jpg');
+    background-image: url('/src/img/champ/ryze.jpg');
     z-index: 999;
     position: absolute;
 }
 
 .azir-fullcut{
-    background-image: url('/src/img/azir-4k.jpg');
+    background-image: url('/src/img/champ/azir.jpg');
     z-index: 999;
     position: absolute;
 }
 
 .orianna-fullcut{
-    background-image: url('/src/img/orianna-4k.jpg');
+    background-image: url('/src/img/champ/orianna.jpg');
     z-index: 999;
     position: absolute;
 }
 
 .corki-fullcut{
-    background-image: url('/src/img/corki-4k.jpg');
+    background-image: url('/src/img/champ/corki.jpg');
     z-index: 999;
     position: absolute;
 }
 
 .galio-fullcut{
-    background-image: url('/src/img/galio-4k.jpg');
+    background-image: url('/src/img/champ/galio.jpg');
     z-index: 999;
     position: absolute;
 }
 
 .leblanc-fullcut{
-    background-image: url('/src/img/leblanc-4k.jpg');
+    background-image: url('/src/img/champ/leblanc.jpg');
     z-index: 999;
     position: absolute;
 }
 
 .ahri-fullcut{
-    background-image: url('/src/img/ahri-4k.jpg');
+    background-image: url('/src/img/champ/ahri.jpg');
     z-index: 999;
     position: absolute;
 }
@@ -391,7 +392,7 @@ body{
 .career{
     position: relative;
     height: 500px;
-    background-image: url('/src/img/bg3.png');
+    background-image: url('/src/img/bg/bg3.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -476,13 +477,14 @@ body{
 
 .champ-main{
     width: 0%;
+    margin-top: 50px;
     position: relative;
     transition: all 2s;
 }
 
 .champ-container{
     width: 100%;
-    height: 400px;
+    height: 380px;
 }
 
 .champ{
@@ -490,6 +492,7 @@ body{
     width: 13%;
     height: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 25px;
     animation: linear;
     transition: all 2s;
@@ -601,6 +604,7 @@ body{
 .history-main{
     width: 100%;
     height: 100%;
+    overflow: hidden;
     flex-shrink: 0;
 }
 
@@ -680,7 +684,7 @@ body{
 .season-img{
     width: 100%;
     height: 100%;
-    background-image: url('/src/img/T1_Faker_2024_Split_1.png');
+    background-image: url('/src/img/faker/T1_Faker_2024_Split_1.png');
     background-size: 95%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -710,6 +714,7 @@ body{
 .video video{
     width: 99%;
     height: 99%;
+    transition: all 0.3s;
 }
 
 
@@ -743,13 +748,13 @@ body{
 .button .info{
     width: 10%;
     padding: 0;
-    transition: all 0.2s;
+    transition: all 0.7s;
 }
 
 .button-inner{
     width: 50%;
     height: 100%;
-    transition: all 0.2s;
+    transition: all 0.7s;
 }
 
 .match-info-container{
@@ -782,10 +787,10 @@ body{
 }
 
 .match-info-inner .container-header,
-.match-info-inner .info{
-    width: 40%;
+.match-info-inner .info-container{
+    width: 50%;
     z-index: 0;
-    transition: all 0.2s;
+    transition: all 0.4s;
 }
 
 .season-info-container{
@@ -820,7 +825,6 @@ body{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-image: url('/src/img/ahri-port.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -847,86 +851,157 @@ body{
     margin: auto;
 }
 
-@media (max-width:600px) {
-
-}
-
-@media (max-width: 900px) {
-.section-padding {
-        padding-inline: 100px;
+@media (max-width: 1440px) {
+    .section-margin {
+        margin-top: 30px;
     }
-    h1, h2{
-        font-size: 60px;
-    }
-    .main img{
-        height: 90%;
-    }
-    .sub-title h1{
-        font-size: 65px;
-    }
-    .line{
-        margin-bottom: 10px;
-    }
-    .career-inner p,tr{
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 100px) {
-
     .section-padding {
-        padding-inline: 100px;
-    }
-    h1, h2{
-        font-size: 20px;
-    }
-    .main img{
-        height: 90%;
-    }
-    .line{
-        margin-bottom: 10px;
-    }
-    .career-inner p,tr{
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 1800px) { 
-    .section-padding {
-        padding-inline: 100px;
+        padding-inline: 30px;
     }
     h1{
-        font-size: 50px;
+        font-size: 45px;
     }
     h2{
         font-size: 30px;
     }
-    .main-img{
-        height: 90%;
-    }
-
-    .mid-logo{
-        padding-inline: 120px;
-    }
-
-    .mid-logo img{
-        height: 100px;
-    }
-    
-    .mid-logo img:last-child{
-        height: 100px;
+    a, p{
+        font-size: 16px;
     }
     .line{
-        margin-bottom: 10px;
+        margin-bottom: 2px;
     }
-    .container-header p{
+    nav{
+        padding-inline: 80px;
+    }
+    .logo-container{
+        padding-inline: 200px 150px;
+    }
+    .logo-container img:first-child{
+        height: 100px;
+    }
+    .logo-container img:last-child{
+        height: 110px;
+    }
+    .introduce .section-padding{
+        padding-inline: 100px;
+    }
+    .introduce p{
+        font-size: 20px;
+    }
+    .champ-container{
+        height: 300px;
+    }
+    .champ-info h1, .champ-info h2{
+        margin-bottom: 5px;
+    }
+    .bar-container p {
         font-size: 16px;
+        margin: 0;
     }
-    .info p{
-        font-size: 16px;
+    .season-kill{
+        height: 150px;
     }
-
-    .team-introduce .info p{
+    .chart{
+        height: 100%;
+    }
+    .bar-section{
+        height: 100%;
+    }
+    .season-kill .border{
+        height: 77%;
+    }
+    .inner-header h2{
+        font-size: 25px;
+    }
+    .career{
+        height: 400px;
+    }
+    .career img{
+        height: 400px;
+    }
+    .carousel-nav-container, .history-carousel-container{
+        width: 90%;
+    }
+    .history-main p{
         font-size: 14px;
+    }
+    .container-header p, .match-info-container p, .season-info-container p{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-margin {
+        margin-top: 30px;
+    }
+    .section-padding {
+        padding-inline: 10px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    a, p{
+        font-size: 16px;
+    }
+    .line{
+        margin-bottom: 2px;
+    }
+    .logo-container{
+        padding-inline: 200px 150px;
+    }
+    .logo-container img:first-child{
+        height: 100px;
+    }
+    .logo-container img:last-child{
+        height: 110px;
+    }
+    .introduce .section-padding{
+        padding-inline: 100px;
+    }
+    .introduce p{
+        font-size: 20px;
+    }
+    .champ-container{
+        height: 300px;
+    }
+    .champ-info h1, .champ-info h2{
+        margin-bottom: 5px;
+    }
+    .bar-container p {
+        font-size: 16px;
+        margin: 0;
+    }
+    .season-kill{
+        height: 150px;
+    }
+    .chart{
+        height: 100%;
+    }
+    .bar-section{
+        height: 100%;
+    }
+    .season-kill .border{
+        height: 77%;
+    }
+    .inner-header h2{
+        font-size: 25px;
+    }
+    .career{
+        height: 400px;
+    }
+    .career img{
+        height: 400px;
+    }
+    .carousel-nav-container, .history-carousel-container{
+        width: 90%;
+    }
+    .history-main p{
+        font-size: 14px;
+    }
+    .container-header p, .match-info-container p, .season-info-container p{
+        font-size: 17px;
     }
 }
